@@ -1,3 +1,7 @@
+// ===============================
+// Sushi API - Main Server File
+// Handles routes, middleware, and database connection
+// ===============================
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
