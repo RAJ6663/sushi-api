@@ -1,8 +1,5 @@
 // Sushi API Backend Project - Completed version
-// ===============================
-// Sushi API - Main Server File
-// Handles routes, middleware, and database connection
-// ===============================
+
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -105,6 +102,11 @@ app.delete("/sushi/:id", authMiddleware, async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log(`Server running on port ${process.env.PORT || 5000}`);
-});
+// Only start server when run directly
+if (require.main === module) {
+  app.listen(process.env.PORT || 5000, () => {
+    console.log(`Server running on port ${process.env.PORT || 5000}`);
+  });
+}
+
+module.exports = app;
