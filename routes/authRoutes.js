@@ -1,3 +1,4 @@
+// Handles user registration and login
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");

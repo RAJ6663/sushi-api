@@ -1,3 +1,4 @@
+// Middleware to verify JWT token and protect routes
 const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
